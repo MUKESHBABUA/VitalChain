@@ -47,7 +47,7 @@ const Hospitals = () => {
       <h1 className="text-4xl font-extrabold text-gray-900 text-center mb-6">Nearby Hospitals</h1>
       {loading && (
         <div className="flex flex-col items-center text-center">
-          <Loader className="animate-spin w-10 h-10 text-blue-600" />
+          <Loader className="animate-spin w-10 h-10 text-red-600" />
           <p className="mt-2 text-gray-600">Detecting location & fetching hospitals...</p>
         </div>
       )}
@@ -63,7 +63,7 @@ const Hospitals = () => {
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all hover:scale-105">
               <div className="p-6 flex flex-col items-start">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{hospital.tags.name || "Unknown Hospital"}</h3>
-                <p className="text-gray-600 flex items-center"><MapPin className="w-5 h-5 mr-2 text-blue-500" />{hospital.tags["addr:city"] || "Location not available"}</p>
+                <p className="text-gray-600 flex items-center"><MapPin className="w-5 h-5 mr-2 text-red-500" />{hospital.tags["addr:city"] || "Location not available"}</p>
                 <p className="text-gray-500">Latitude: {hospital.lat}, Longitude: {hospital.lon}</p>
               </div>
             </div>

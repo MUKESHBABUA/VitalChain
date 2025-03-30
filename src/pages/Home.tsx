@@ -11,7 +11,7 @@ const Home = () => {
         className="relative w-full h-screen flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: "url('Assests/pexels-tomfisk-1692693.jpg')" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-gray-900/80 to-transparent"></div>
         <motion.div 
           className="relative z-10 text-center px-6 md:px-16 lg:px-24 text-white max-w-6xl"
           initial={{ opacity: 0, y: 30 }}
@@ -42,13 +42,13 @@ const Home = () => {
           >
             <Link
               to="/registration"
-              className="px-10 py-4 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-blue-700 hover:shadow-blue-500/30"
+              className="px-10 py-4 text-lg font-semibold text-white bg-red-600 rounded-lg shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-red-700 hover:shadow-red-500/30"
             >
               Get Started
             </Link>
             <Link
               to="/Statistics"
-              className="px-10 py-4 text-lg font-semibold text-blue-700 bg-white rounded-lg shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-100"
+              className="px-10 py-4 text-lg font-semibold text-red-700 bg-white rounded-lg shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gray-100"
             >
               Learn More
             </Link>
@@ -59,7 +59,7 @@ const Home = () => {
       {/* Problem We Solve Section - Enhanced with animations */}
       <div className="mt-24 text-center px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-4xl font-extrabold text-gray-900 border-b-4 border-blue-500 pb-2 inline-block"
+          className="text-4xl font-extrabold text-gray-900 border-b-4 border-red-500 pb-2 inline-block"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -97,7 +97,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <FeatureCard
-              icon={<Database className="text-blue-600 w-16 h-16 mb-4" />}
+              icon={<Database className="text-red-600 w-16 h-16 mb-4" />}
               title="No Unified Data"
               description="Each hospital maintains separate records, making it impossible to transfer patient data efficiently."
             />
@@ -108,7 +108,7 @@ const Home = () => {
       {/* Why Choose Us Section - Enhanced with better cards */}
       <div className="mt-32 text-center px-4 sm:px-6 lg:px-8 py-16 bg-gray-50">
         <motion.h2 
-          className="text-4xl font-extrabold text-gray-900 border-b-4 border-blue-500 pb-2 inline-block"
+          className="text-4xl font-extrabold text-gray-900 border-b-4 border-red-500 pb-2 inline-block"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -134,7 +134,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <FeatureCard
-              icon={<ShieldCheck className="text-blue-600 w-16 h-16 mb-4" />}
+              icon={<ShieldCheck className="text-red-600 w-16 h-16 mb-4" />}
               title="Centralized Data"
               description="A single digital record accessible from any hospital in the network."
             />
@@ -169,7 +169,7 @@ const Home = () => {
       {/* How It Works Section - With enhanced step cards */}
       <div className="mt-24 text-center px-4 sm:px-6 lg:px-8">
         <motion.h2 
-          className="text-4xl font-extrabold text-gray-900 border-b-4 border-blue-500 pb-2 inline-block"
+          className="text-4xl font-extrabold text-gray-900 border-b-4 border-red-500 pb-2 inline-block"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -230,7 +230,7 @@ const FeatureCard = ({ icon, title, description }) => (
 
 const StepCard = ({ number, title, description }) => (
   <div className="bg-white rounded-xl shadow-xl p-8 flex flex-col items-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl border border-gray-100 relative overflow-hidden h-full">
-    <div className="absolute -right-4 -top-4 bg-blue-500 text-white w-16 h-16 flex items-center justify-center text-2xl font-bold rounded-full">
+    <div className="absolute -right-4 -top-4 bg-red-500 text-white w-16 h-16 flex items-center justify-center text-2xl font-bold rounded-full">
       {number}
     </div>
     <CheckCircle className="text-green-600 w-16 h-16 mb-4" />

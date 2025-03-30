@@ -7,6 +7,8 @@ import Contact from './pages/Contact';
 import Statistics from './pages/Statistics';
 import Hospitals from './pages/Hospitals';
 import Registration from './pages/Registration';
+import Admin from './pages/Admin';
+import User from './pages/User';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             <Route path="/Statistics" element={<Statistics />} />
             <Route path="/hospitals" element={<Hospitals />} />
             <Route path="/registration" element={<Registration />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/user" element={<User />} />
           </Routes>
         </main>
         <Footer />
