@@ -19,7 +19,7 @@ const Home = () => {
           transition={{ duration: 1 }}
         >
           <motion.h1 
-            className="text-5xl md:text-7xl lg:text-8xl font-bold"
+            className="text-5xl md:text-7xl lg:text-7xl font-bold"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 1.2 }}
