@@ -15,23 +15,23 @@ const Hospitals = () => {
           setLocation({ latitude, longitude });
 
           try {
-            // OpenStreetMap Overpass API for hospitals nearby
             const overpassQuery = `[out:json];node["amenity"="hospital"](around:5000, ${latitude}, ${longitude});out;`;
             const response = await fetch(`https://overpass-api.de/api/interpreter?data=${encodeURIComponent(overpassQuery)}`);
             const data = await response.json();
 
-            if (data.elements.length > 0) {
-              setHospitals(data.elements);
-            } else {
+            if (!data.elements || data.elements.length === 0) {
               setError("No hospitals found nearby.");
+            } else {
+              setHospitals(data.elements);
             }
           } catch (err) {
             setError("Failed to fetch hospital data.");
+          } finally {
+            setLoading(false);
           }
-          setLoading(false);
         },
         (error) => {
-          setError("Location access denied. Please enable location services.");
+          setError(`Location access denied: ${error.message}`);
           setLoading(false);
         },
         { enableHighAccuracy: true }

@@ -48,7 +48,7 @@ const AuthForm = () => {
   };
 
   return (
-    <div className="mt-12 flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-400 to-indigo-600">
+    <div className="mt-10 flex justify-center items-center min-h-screen bg-white">
       <div className="w-full max-w-lg bg-white rounded-lg shadow-lg p-8">
         {/* Toggle Button */}
         <div className="flex justify-between items-center mb-6">
@@ -128,42 +128,6 @@ const AuthForm = () => {
               <p className="text-red-500 text-sm">{errors.password}</p>
             )}
           </div>
-
-          {isRegistering && (
-            <>
-              <div>
-                <label className="flex items-center text-sm font-medium text-gray-700">
-                  <Phone className="mr-2 text-blue-500" /> Phone Number
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
-                  value={formData.phone}
-                  onChange={handleChange}
-                />
-                {errors.phone && (
-                  <p className="text-red-500 text-sm">{errors.phone}</p>
-                )}
-              </div>
-
-              <div>
-                <label className="flex items-center text-sm font-medium text-gray-700">
-                  <Home className="mr-2 text-blue-500" /> Address
-                </label>
-                <textarea
-                  name="address"
-                  rows={3}
-                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
-                  value={formData.address}
-                  onChange={handleChange}
-                />
-                {errors.address && (
-                  <p className="text-red-500 text-sm">{errors.address}</p>
-                )}
-              </div>
-            </>
-          )}
         </form>
       </div>
     </div>
