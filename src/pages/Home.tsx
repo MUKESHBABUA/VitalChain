@@ -9,7 +9,7 @@ const Home = () => {
       {/* Enhanced Hero Section - Full width with improved visuals */}
       <div
         className="relative w-full h-screen flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('pexels-tomfisk-1692693.jpg')" }}
+        style={{ backgroundImage: "url('Assests/pexels-tomfisk-1692693.jpg')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900/80 to-transparent"></div>
         <motion.div 
@@ -27,7 +27,7 @@ const Home = () => {
             Ensuring Efficient Healthcare Management
           </motion.h1>
           <motion.p 
-            className="mt-6 max-w-4xl mx-auto text-lg md:text-xl lg:text-2xl text-gray-100"
+            className="mt-6 max-w-xl mx-auto text-lg md:text-xl lg:text-2xl text-gray-100"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 1.2 }}

@@ -48,8 +48,8 @@ const AuthForm = () => {
   };
 
   return (
-    <div className="mt-10 flex justify-center items-center min-h-screen bg-white">
-      <div className="w-full max-w-lg bg-white rounded-lg shadow-lg p-8">
+    <div className="flex justify-center items-center min-h-screen bg-[#F0F8FF] p-8">
+      <div className="w-full max-w-lg bg-white rounded-xl shadow-xl p-8 transform transition duration-500 hover:scale-105">
         {/* Toggle Button */}
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-3xl font-bold text-gray-900">
@@ -73,7 +73,7 @@ const AuthForm = () => {
                 <input
                   type="text"
                   name="firstName"
-                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm"
                   value={formData.firstName}
                   onChange={handleChange}
                 />
@@ -88,7 +88,7 @@ const AuthForm = () => {
                 <input
                   type="text"
                   name="lastName"
-                  className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm"
                   value={formData.lastName}
                   onChange={handleChange}
                 />
@@ -106,7 +106,7 @@ const AuthForm = () => {
             <input
               type="email"
               name="email"
-              className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+              className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm"
               value={formData.email}
               onChange={handleChange}
             />
@@ -120,7 +120,7 @@ const AuthForm = () => {
             <input
               type="password"
               name="password"
-              className="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+              className="w-full mt-1 p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm"
               value={formData.password}
               onChange={handleChange}
             />
@@ -128,6 +128,15 @@ const AuthForm = () => {
               <p className="text-red-500 text-sm">{errors.password}</p>
             )}
           </div>
+
+          <button
+            type="submit"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition duration-300 flex items-center justify-center"
+            disabled={loading}
+          >
+            {loading ? <Loader2 className="animate-spin mr-2" /> : <LogIn className="mr-2" />} 
+            {isRegistering ? "Register" : "Login"}
+          </button>
         </form>
       </div>
     </div>

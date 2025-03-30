@@ -37,7 +37,7 @@ const Header = () => {
               <Link to="/" className="flex items-center space-x-3 group">
                 <div className="relative">
                   <img 
-                    src="image (1).png" 
+                    src="/Assests/image (1).png" 
                     alt="VitalChain Logo" 
                     className={`h-12 w-12 transition-all duration-300 group-hover:scale-110 ${
                       scrolled ? 'filter brightness-90' : 'drop-shadow-md'
