@@ -11,7 +11,7 @@ const Home = () => {
         className="relative w-full h-screen flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: "url('Assests/pexels-tomfisk-1692693.jpg')" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-gray-900/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-gray-900/80 to-transparent"></div>
         <motion.div 
           className="relative z-10 text-center px-6 md:px-16 lg:px-24 text-white max-w-6xl"
           initial={{ opacity: 0, y: 30 }}

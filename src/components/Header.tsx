@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, UserCircle, LogOut, LogIn } from 'lucide-react';
+import logo from '/Assests/image (2).png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,14 +26,13 @@ const Header = () => {
 
   return (
     <>
-      <header className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-gradient-to-r from-red-700 to-indigo-800'
-      }`}>
+      <header className="fixed w-full z-50 transition-all duration-300 bg-gradient-to-r from-red-900 to-gray-900 text-white py-4 shadow-lg">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link to="/" className="text-2xl font-bold tracking-tight text-white">
-              Vital<span className="text-red-400">⛓️‍💥</span>Chain
+            <Link to="/" className="flex items-center space-x-2">
+              <img src={logo} alt="VitalChain Logo" className="h-10" />
+              <span className="text-2xl font-bold tracking-tight text-white">Vital<span className="text-red-400">⛓️‍💥</span>Chain</span>
             </Link>
             
             {/* Desktop Navigation */}
@@ -81,7 +81,7 @@ const Header = () => {
 // Navigation Link Component
 const NavLink = ({ to, children, active }) => (
   <Link to={to} className={`text-lg font-medium transition-all duration-300 ${
-    active ? 'text-red-600' : 'text-white hover:text-red-200'}`}>{children}</Link>
+    active ? 'text-white bg-red-700 px-3 py-1 rounded-md' : 'text-gray-300 hover:text-white hover:bg-red-600 px-3 py-1 rounded-md'}`}>{children}</Link>
 );
 
 export default Header;
